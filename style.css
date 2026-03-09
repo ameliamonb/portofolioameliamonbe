@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sauce', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+nav, nav a {
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+header figure { margin: 0; }
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+nav a:hover { color: #ff2f7f; }
+
+.cv-btn {
+  background: #ff2f7f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Pixelify Sans', sans-serif;
+  box-shadow: 0 4px 10px rgba(255, 47, 127, 0.3);
+}
+
+
+/* ---------------- PROJECT CAROUSEL ---------------- */
+
+.projects {
+  padding: 0rem;
+  padding-top: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.projects::-webkit-scrollbar { display: none; }
+
+.projects__track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+}
+
+.project-card {
+  position: relative;
+  width: 50vw;
+  height: 550px;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50, 50, 50, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card__name {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}

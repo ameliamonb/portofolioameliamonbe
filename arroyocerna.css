@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #E8006F;
+  --black: #111111;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: 'Open Sauce', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+header figure { margin: 0; }
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-family: 'Pixelify Sans', sans-serif;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--pink); }
+
+.cv-btn {
+  background: var(--pink);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(255, 47, 127, 0.3);
+}
+
+.project-hero {
+  position: relative;
+  padding: 2rem 60px 1rem;
+  overflow: hidden;
+}
+
+.project-title {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.project-type {
+  font-family: 'Open Sauce', sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+.project-category {
+  font-family: 'Open Sauce', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* Stars in corners */
+.star-corner {
+  position: absolute;
+  pointer-events: none;
+}
+
+.star-corner img {
+  width: 80px;
+}
+
+.star--tl {
+  top: 10px;
+  left: 10px;
+}
+
+.star--tr {
+  top: 10px;
+  right: 10px;
+}
+
+
+.hero-img {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ---------------- CONTENT ---------------- */
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  padding: 4rem 60px;
+  align-items: start;
+}
+
+.project-content__text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Photo grid */
+.project-content__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+.project-content__grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* ---------------- BACK BUTTON ---------------- */
+
+.back-wrap {
+  padding: 0 60px 4rem;
+}
+
+.back-btn {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: var(--pink);
+  text-decoration: none;
+  font-size: 1rem;
+  border: 2px solid var(--pink);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+  background: var(--pink);
+  color: white;
+}
